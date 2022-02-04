@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Data fetching machine!</title>
+  <style>
+    img {
+      max-width: 300px;
+    }
+  </style>
+</head>
+
+<body>
+  <label for="name">Click Button:</label>
+    <button id="startProcess">START!</button>
+    <br></br>
+    <h1>Cocktail Section</h1>
+    <section id="cocktailSection"></section>
+    <section id="nasaPictureSection"></section>
+    <script>
+
+      //References
+      let triggerButton = document.getElementById("startProcess");
+      let randomCocktailURL = "https://www.thecocktaildb.com/api/json/v1/1/random.php"
+      let cocktailSection = document.getElementById("cocktailSection")
+      let nasaPictureSection = document.getElementById("nasaPictureSection")
+
+      let nasaAPdDBaseURL = "https://api.nasa.gov/planetary/apod"
+      let nasaAPIkey = "api_key=DEMO_KEY"
+      let nasaAPIdate = "date="
+      let fetchDate = randomDate(new Date(1995, 6, 20), new Date())
+
+
+      //Functions
+      let triggerHandler = function() {
+        fetchRandomCocktail()
+      }
+
+      //fetchers
+      let fetchRandomCocktail = function() {
+        fetch(randomCocktailURL)
+          .then((response) => {
+            console.info(response)
+            return response.json()
+          }).then((data) => {
+            console.info(data)
+            cocktailDataHandler(data)
+          })
+          .catch((serverError) => {
+            console.error(serverError)
+          })
+      }
+
+      let fetchNASApicture = function() {
+
+        let queryURL = nasaAPdDBaseURL + "?" + nasaAPIkey + "&" + nasaAPIdate + fetchDate
+        console.info(queryURL)
+
+        fetch(queryURL)
+          .then((response) => {
+            return response.json()
+          })
+          .then((data) => {
+            console.info(data)
+          })
+      }
+
+      //handlers
+      let cocktailDataHandler = function(cocktailData) {
+        while (cocktailSection.firstChild) {
+          cocktailSection.removeChild(cocktailSection.firstChild)
+        }
+
+        let name = cocktailData.drinks[0].strDrink
+        let thumb = cocktailData.drinks[0].strDrinkThumb
+
+        let nameContainer = document.createElement('h3')
+        nameContainer.innerText = name
+        cocktailSection.appendChild(nameContainer)
+
+        let thumbContainer = document.createElement('img')
+        thumbContainer.src = thumb
+        thumbContainer.alt = name
+        cocktailSection.appendChild(thumbContainer)
+
+        fetchNASApicture()
+      }
+
+      let randomDate = function(start, end) {
+        var d = new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime())),
+          month = '' + (d.getMonth() + 1),
+          day = '' + d.getDate(),
+          year = d.getFullYear();
+
+        if (month.length < 2) month = '0' + month;
+        if (day.length < 2) day = '0' + day;
+
+        return [year, month, day].join('-');
+      }
+
+      let nasaPictureHandler = function(nasaPicture) {
+        while (nasaPictureSection.firstchild) {
+          nasaPictureSection.removeChild(nasaPictureSection.firstChild)
+        }
+
+        let picture = nasaPicture.url
+
+        let pictureContainer = document.createElement('img')
+        pictureContainer.src = picture
+        nasaPictureSection.appendChild(pictureContainer)
+
+      }
+
+      //Events
+      triggerButton.addEventListener('click', triggerHandler)
+    </script>
+</body>
+
+</html>

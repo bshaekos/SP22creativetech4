@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Rube Goldberg Machine</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script> -->
+</head>
+
+<body>
+  <h1>Welcome to Blake and Yining's Rube Goldberg Machine!</h1>
+  <!--h2>Please respond to prompts to make the experience interactive</h2-->
+  <form>
+    <label for="dollarUSD">Enter a US dollar amount below $180:</label><br></br>
+    <input type="number" id="dollarUSD" name="numberUSD" min="1" max="180"><br></br>
+    <button id="startProcess">Begin Process</button>
+  </form>
+  <h3>Currency Exchange from USD to EUR</h3>
+  <section id="currencyExchangeSection"></section>
+  <h3>Fake Product</h3>
+  <section id="fakeProductSection"></section>
+  <h3>Cat Photo</h3>
+  <section id="catSection"></section>
+  <h3>Temperature(°C)</h3>
+  <section id="weatherSection"></section>
+  <h3>Zen Quote</h3>
+  <section id="zenQuoteSection"></section>
+  <h3>Meme</h3>
+  <section id="memeSection"></section>
+  <!-- <div id="probability"></div> -->
+  <!--Does the prompt need to be placed into this section? If so, does the ordering matter?-->
+  <!-- <h3>What is your favorite food?</h3> We want it to appear in sequential order so would be create it with JavaScript? -->
+  <script>
+    //References
+    let triggerButton = document.getElementById("startProcess");
+    let textInput = document.getElementById("dollarUSD");
+    let dollarAmount = textInput.value;
+    let currencyExchangeBaseURL = "https://api.currencyfreaks.com/latest"
+    let currencyExchangeAPIkey = "apikey=003aab6be93140b599e104c4e765999e"
+    let currencyExchangeSymbol = "symbols=EUR"
+    let currencyExchangeSection = document.getElementById("currencyExchangeSection");
+    let currencyEUR;
+    let fakeProductBaseURL = "https://fakestoreapi.com/products/"
+    let randomProductID = Math.floor(Math.random() * 20) + 1;
+    let catURL = "https://api.thecatapi.com/v1/images/search"
+    let api_key = "api_key=3c38a403-dd70-4a95-9998-b3fdb8833e36"
+    let catSection = document.getElementById('catSection')
+    let weatherBaseURL = "https://api.open-meteo.com/v1/forecast"
+    let weatherLat = "latitude="
+    let weatherLong = "longitude="
+    let airTemp = "hourly=temperature_2m"
+    let today = new Date();
+    let currentTime = today.getHours();
+    // let map;
+    // let image = document.getElementById('catSection'); // The image we want to classify
+    // let result = document.getElementById('resultSection'); // The result tag in the HTML
+    // let probability = document.getElementById('probability'); // The probability tag in the HTML
+    //let classifier = ml5.imageClassifier('MobileNet', modelLoaded);
+    let zenQuoteURL = "https://zenquotes.io/api/random/"
+    let zenQuoteSection = document.getElementById('zenQuoteSection')
+    let zenQuote_api_key = "b1f0d4a5fd077f25256a389e97893140eab28613"
+    let memeURL = "https://api.imgflip.com/get_memes"
+    let memeSection = document.getElementById('memeSection')
+
+    //Step 1 - Handler
+    let triggerButtonHandler = function(event) {
+      event.preventDefault()
+      dollarAmount = textInput.value
+      fetchCurrencyExchange()
+    }
+
+    //Step 2 - Fetcher
+    let fetchCurrencyExchange = function() {
+      let queryURLCurrencyExchange = currencyExchangeBaseURL + "?" + currencyExchangeAPIkey + "&" + currencyExchangeSymbol
+
+      fetch(queryURLCurrencyExchange)
+        .then((response) => {
+          console.info(response)
+          return response.json()
+        })
+        .then((data) => {
+          console.info(data)
+          currencyExchangeDataHandler(data)
+        })
+        .catch((serverError) => {
+          console.error(serverError)
+        })
+    }
+
+    //Step 2 - Handler
+    let currencyExchangeDataHandler = function(currencyExchangeData) {
+      while (currencyExchangeSection.firstChild) {
+        currencyExchangeSection.removeChild(currencyExchangeSection.firstChild)
+      }
+
+      let eurExchangeRate = currencyExchangeData.rates.EUR
+
+      currencyEUR = dollarAmount * eurExchangeRate
+
+      let eurContainer = document.createElement('h3')
+      eurContainer.innerText = currencyEUR
+      currencyExchangeSection.appendChild(eurContainer)
+
+      fetchFakeProduct()
+    }
+
+    //Step 3 - Fetcher
+    let fetchFakeProduct = function() {
+      let queryURLFakeProduct = fakeProductBaseURL + randomProductID
+      fetch(queryURLFakeProduct)
+        //console.info(queryURLFakeProduct)
+        .then((response) => {
+          console.info(response)
+          return response.json()
+        })
+        .then((data) => {
+          console.info(data)
+          fakeProductDataHandler(data)
+        })
+        .catch((serverError) => {
+          console.error(serverError)
+        })
+
+    }
+
+    //Step 3 - Handler
+    let fakeProductDataHandler = function(fakeProductData) {
+      while (fakeProductSection.firstChild) {
+        fakeProductSection.removeChild(fakeProductSection.firstChild)
+      }
+
+      let title = fakeProductData.title
+      let decription = fakeProductData.description
+      let price = fakeProductData.price
+
+      let titleContainer = document.createElement('h3')
+      titleContainer.innerText = title
+      fakeProductSection.appendChild(titleContainer)
+
+      let priceContainer = document.createElement('h3')
+      priceContainer.innerText = price
+      fakeProductSection.appendChild(priceContainer)
+
+      if (currencyEUR > price) {
+        fetchCat();
+      } else {
+        fetchWeather();
+      }
+    }
+
+    //Step 4a - Fetcher
+    let fetchCat = function() {
+      let queryURLCat = catURL + "?" + api_key
+      fetch(queryURLCat)
+        .then((response) => {
+          //console.log("-- Image from TheCatAPI.com")
+          return response.json()
+        })
+        .then((data) => {
+          console.log(data)
+          catDataHandler(data)
+        })
+        .catch((serverError) => {
+          console.error(serverError)
+        })
+    }
+    //Step 4a - Handler
+    let catDataHandler = function(catData) {
+      while (catSection.firstChild) {
+        catSection.removeChild(catSection.firstChild)
+      }
+      let catPic = catData[0].url
+      let catContainer = document.createElement('img')
+      catContainer.src = catPic
+      catContainer.id = "imgToClassify"
+      catSection.appendChild(catContainer)
+      console.info(catContainer)
+
+      fetchZenQuote()
+    }
+
+    //Step 4b - Fetcher
+    let fetchWeather = function() {
+      let queryURLWeather = weatherBaseURL + "?" + weatherLat + dollarAmount + "&" + weatherLong + currencyEUR + "&" + airTemp
+      console.info(queryURLWeather)
+      fetch(queryURLWeather)
+        .then((response) => {
+          console.info(response)
+          return response.json()
+        })
+        .then((data) => {
+          console.info(data)
+          weatherDataHandler(data)
+        })
+        .catch((serverError) => {
+          console.error(serverError)
+        })
+
+    }
+
+    //Step 4b - Handler
+    let weatherDataHandler = function(weatherData) {
+      while (weatherSection.firstChild) {
+        weatherSection.removeChild(weatherSection.firstChild)
+      }
+      let temperatureC = weatherData.hourly.temperature_2m[currentTime]
+      //let temperatureF = (temperatureC × 1.8) + 32
+
+      let tempContainer = document.createElement('h3')
+      tempContainer.innerText = temperatureC
+      weatherSection.appendChild(tempContainer)
+
+      fetchMeme()
+    }
+
+    //Step 5a - Fetcher
+    let fetchZenQuote = function() {
+
+      let queryURLZenQuote = zenQuoteURL + zenQuote_api_key
+
+      console.info(queryURLZenQuote)
+
+      fetch(queryURLZenQuote)
+
+        .then((response) => {
+          console.info(response)
+          return response.json()
+        })
+
+        .then((data) => {
+          console.log(data)
+          zenQuoteDataHandler(data)
+        })
+
+        .catch((serverError) => {
+          console.error(serverError)
+        })
+    }
+
+    //Step 5a - Handler
+    let zenQuoteDataHandler = function(zenQuoteData) {
+
+      while (zenQuoteSection.firstChild) {
+        zenQuoteSection.removeChild(zenQuoteSection.firstChild)
+      }
+      let zenQuote = zenQuoteData[0].q
+      let zenQuoteContainer = document.createElement('h3')
+      zenQuoteContainer.innerText = zenQuote
+      zenQuoteSection.appendChild(zenQuoteContainer)
+
+    }
+
+
+    //Step 5b - Fetcher
+    let fetchMeme = function() {
+      let queryURLMeme = memeURL
+      console.info(queryURLMeme)
+
+      fetch(queryURLMeme)
+
+        .then((response) => {
+          console.info(response)
+          return response.json()
+        })
+        .then((data) => {
+          console.info(data)
+          memeDataHandler(data)
+        })
+
+        .catch((serverError) => {
+          console.error(serverError)
+        })
+    }
+
+    //Step 5b - Handler
+    let memeDataHandler = function(memeData) {
+
+      while (memeSection.firstChild) {
+        memeSection.removeChild(memeSection.firstChild)
+      }
+
+      let fetchID = Math.floor(Math.random() * 100)
+      console.info(fetchID)
+
+      let memePicData = memeData.data.memes
+      let memePic = memePicData[fetchID].url
+      let memeContainer = document.createElement('img')
+      memeContainer.src = memePic
+      memeSection.appendChild(memeContainer)
+
+    }
+
+    // function initMap() {
+    //   map = new google.maps.Map(document.getElementById("map"), {
+    //     center: {
+    //       lat: weatherLat,
+    //       lng: weatherLong
+    //     },
+    //     zoom: 8,
+    //   });
+
+    //Step 5 - Image Fetcher
+    // Initialize the Image Classifier method with MobileNet
+    // let fetchImageClassifier = function() {
+    //   let queryURLImageClassifier = imageClassifierModel
+    // }
+
+    //Step 5 - Image Classifier
+
+    triggerButton.addEventListener('click', triggerButtonHandler)
+    // window.addEventListener('load', (e) => {
+    //   if(e.target && e.target.id == "catContainer" ){
+    //     ml5.imageClassifier('MobileNet')
+    //       .then(classifier => classifier.classify(catContainer))
+    //       .then(results => {
+    //         result.innerText = results[0].className;
+    //         probability.innerText = results[0].probability.toFixed(2);
+    //       });
+    //   }
+    // })
+  </script>
+</body>
+
+</html>
