@@ -16,17 +16,11 @@
     <input type="number" id="dollarUSD" name="numberUSD" min="1" max="180"><br></br>
     <button id="startProcess">Begin Process</button>
   </form>
-  <h3>Currency Exchange from USD to EUR</h3>
   <section id="currencyExchangeSection"></section>
-  <h3>Fake Product</h3>
   <section id="fakeProductSection"></section>
-  <h3>Cat Photo</h3>
   <section id="catSection"></section>
-  <h3>Temperature(°C)</h3>
-  <section id="weatherSection"></section>
-  <h3>Zen Quote</h3>
+  <section id="temperatureSection"></section>
   <section id="zenQuoteSection"></section>
-  <h3>Meme</h3>
   <section id="memeSection"></section>
   <!-- <div id="probability"></div> -->
   <!--Does the prompt need to be placed into this section? If so, does the ordering matter?-->
@@ -98,8 +92,13 @@
 
       currencyEUR = dollarAmount * eurExchangeRate
 
-      let eurContainer = document.createElement('h3')
-      eurContainer.innerText = currencyEUR
+      let currencyExchangeTitle = document.createElement('h3')
+      currencyExchangeTitle.textContent = "Currency Exchange from USD to EUR"
+      currencyExchangeSection.appendChild(currencyExchangeTitle)
+
+
+      let eurContainer = document.createElement('p')
+      eurContainer.innerText = currencyEUR.toFixed(2)
       currencyExchangeSection.appendChild(eurContainer)
 
       fetchFakeProduct()
@@ -134,11 +133,15 @@
       let decription = fakeProductData.description
       let price = fakeProductData.price
 
-      let titleContainer = document.createElement('h3')
+      let fakeProductTitle = document.createElement('h3')
+      fakeProductTitle.textContent = "Fake Product"
+      fakeProductSection.appendChild(fakeProductTitle)
+
+      let titleContainer = document.createElement('p')
       titleContainer.innerText = title
       fakeProductSection.appendChild(titleContainer)
 
-      let priceContainer = document.createElement('h3')
+      let priceContainer = document.createElement('p')
       priceContainer.innerText = price
       fakeProductSection.appendChild(priceContainer)
 
@@ -171,11 +174,16 @@
         catSection.removeChild(catSection.firstChild)
       }
       let catPic = catData[0].url
+
+
+      let catPhotoTitle = document.createElement('h3')
+      catPhotoTitle.textContent = "Cat Photo"
+      catSection.appendChild(catPhotoTitle)
+
       let catContainer = document.createElement('img')
       catContainer.src = catPic
-      catContainer.id = "imgToClassify"
+      //catContainer.id = "imgToClassify"
       catSection.appendChild(catContainer)
-      console.info(catContainer)
 
       fetchZenQuote()
     }
@@ -201,15 +209,19 @@
 
     //Step 4b - Handler
     let weatherDataHandler = function(weatherData) {
-      while (weatherSection.firstChild) {
-        weatherSection.removeChild(weatherSection.firstChild)
+      while (temperatureSection.firstChild) {
+        temperatureSection.removeChild(temperatureSection.firstChild)
       }
       let temperatureC = weatherData.hourly.temperature_2m[currentTime]
       //let temperatureF = (temperatureC × 1.8) + 32
 
-      let tempContainer = document.createElement('h3')
+      let temperatureTitle = document.createElement('h3')
+      temperatureTitle.textContent = "Temperature(°C)"
+      temperatureSection.appendChild(temperatureTitle)
+
+      let tempContainer = document.createElement('p')
       tempContainer.innerText = temperatureC
-      weatherSection.appendChild(tempContainer)
+      temperatureSection.appendChild(tempContainer)
 
       fetchMeme()
     }
@@ -245,7 +257,12 @@
         zenQuoteSection.removeChild(zenQuoteSection.firstChild)
       }
       let zenQuote = zenQuoteData[0].q
-      let zenQuoteContainer = document.createElement('h3')
+
+      let zenQuoteTitle = document.createElement('h3')
+      zenQuoteTitle.textContent = "Zen Quote"
+      zenQuoteSection.appendChild(zenQuoteTitle)
+
+      let zenQuoteContainer = document.createElement('p')
       zenQuoteContainer.innerText = zenQuote
       zenQuoteSection.appendChild(zenQuoteContainer)
 
@@ -285,6 +302,11 @@
 
       let memePicData = memeData.data.memes
       let memePic = memePicData[fetchID].url
+
+      let memeTitle = document.createElement('h3')
+      memeTitle.textContent = "Meme"
+      memeSection.appendChild(memeTitle)
+
       let memeContainer = document.createElement('img')
       memeContainer.src = memePic
       memeSection.appendChild(memeContainer)
