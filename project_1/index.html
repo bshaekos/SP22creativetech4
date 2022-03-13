@@ -12,7 +12,7 @@
   <h1>Welcome to Blake and Yining's Rube Goldberg Machine!</h1>
   <!--h2>Please respond to prompts to make the experience interactive</h2-->
   <form>
-    <label for="dollarUSD">Enter a US dollar amount below $180:</label><br></br>
+    <label for="dollarUSD">Enter a US dollar amount below $ 180:</label><br></br>
     <input type="number" id="dollarUSD" name="numberUSD" min="1" max="180"><br></br>
     <button id="startProcess">Begin Process</button>
   </form>
@@ -98,7 +98,7 @@
 
 
       let eurContainer = document.createElement('p')
-      eurContainer.innerText = currencyEUR.toFixed(2)
+      eurContainer.innerText = currencyEUR.toFixed(2) + " " + "€"
       currencyExchangeSection.appendChild(eurContainer)
 
       fetchFakeProduct()
@@ -142,7 +142,7 @@
       fakeProductSection.appendChild(titleContainer)
 
       let priceContainer = document.createElement('p')
-      priceContainer.innerText = price
+      priceContainer.innerText = "$" + " " + price.toFixed(2)
       fakeProductSection.appendChild(priceContainer)
 
       if (currencyEUR > price) {
@@ -266,6 +266,15 @@
       zenQuoteContainer.innerText = zenQuote
       zenQuoteSection.appendChild(zenQuoteContainer)
 
+      function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+      }
+      async function print() {
+        await sleep(1000);
+        window.print();
+      }
+      print()
+
     }
 
 
@@ -310,6 +319,15 @@
       let memeContainer = document.createElement('img')
       memeContainer.src = memePic
       memeSection.appendChild(memeContainer)
+
+      function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+      }
+      async function print() {
+        await sleep(1000);
+        window.print();
+      }
+      print()
 
     }
 
