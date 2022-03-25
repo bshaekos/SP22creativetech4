@@ -1,6 +1,7 @@
 # Creative Tech 4 - Spring 2022
 
 Project 1: Rube Goldberg Machine 
+
 Teammate: Yining Gao
 
 The Web was built around the concept of requests and responses - a constant back and forth between a server on the Internet and a browser on your computer. As it grew and expanded the need arose to get exchange going not just between a person and a machine but among many machines.
