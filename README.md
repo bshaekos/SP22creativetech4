@@ -13,6 +13,10 @@ In the spirit of Rube Goldberg's fascination with the mechanism over the end res
 
 Project Documentation
 
+
+https://user-images.githubusercontent.com/76088958/160047614-8f8afd4e-f3a1-475e-9e94-02c47cc75a2b.mp4
+
+
 [Rube Goldberg Machine_3.pdf](https://github.com/bshaekos/SP22creativetech4/files/8347008/Rube.Goldberg.Machine_3.pdf)
 
 [Rube Goldberg Machine_4.pdf](https://github.com/bshaekos/SP22creativetech4/files/8347009/Rube.Goldberg.Machine_4.pdf)
