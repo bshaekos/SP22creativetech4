@@ -16,6 +16,9 @@ A user initiates a single action - a click of a button, a text entry, a page scr
 
 In the spirit of Rube Goldberg's fascination with the mechanism over the end result - how can we build similar systems in the digital realm? What kind of data could be passed around? With services could be chained together to produce some unexpected outcomes? What would the triggers look like - and the end results? None of those need to be practical, efficient or even reasonable - the focus is on the celebration of the chains of events and the mechanisms that enable them.
 
+System Architecture:
+
+![Yining   Blake - RUBE GOLDBERG MACHINE - System Architecture](https://user-images.githubusercontent.com/76088958/164376567-c9c4c608-d906-451e-901c-77a9c4ec1439.jpg)
 
 Project Documentation:
 
