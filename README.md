@@ -4,7 +4,7 @@
 
 ### Tools:
 
-HTML, CSS and ITTT
+HTML, CSS and IFTT
 
 ### Timeline: 
 
