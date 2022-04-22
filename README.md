@@ -56,7 +56,7 @@ https://user-images.githubusercontent.com/76088958/160048030-297c0509-1142-430f-
 [Rube Goldberg Machine_3.pdf](https://github.com/bshaekos/SP22creativetech4/files/8347008/Rube.Goldberg.Machine_3.pdf)
 
 
-## Reflection:
+### Reflection:
 
 Overall, I found the project a lot of fun and a great opportunity for me to further my front-end coding skills. I had not worked with APIs before so it gave me insight into how the internet generally functions. In addition, I become more knowledgeable about the meaning of HTML status codes as Yining and I wrote GET requests to certain services. I was most frustrated by the limitations of HTML in modifying the data once we received it back from the service. If I had more time, I would have liked to add some JavaScript to manipulate the data more so that we didn't have to change our initial vision of the project. Also, the interpretation of some of the API documentation was quite ambiguous, which led to moments of uncertainty as to how to get to the data. 
 
@@ -70,6 +70,10 @@ Agisoft, Axis Neuron, Blender, Gravity Sketch, Mixamo, Tilt Brush and Unity
 ### Timeline: 
 
 3 weeks
+
+### Advisors:
+
+Jenny Rodenhouse, Maxim Safioulline and Ben Hooker
 
 ### Project Brief: 
 
@@ -109,7 +113,7 @@ In addition, I motion captured my body and rigged the motion capture to a Maximo
 
 ![Walking-Sitting_Animation](https://user-images.githubusercontent.com/76088958/164609462-0df42665-8670-49f1-ac4d-58c8e430150a.gif)
 
-In addition to using photogrammetry, I used Blender to create a mash-up of free 3D models available online. 
+In addition to using photogrammetry, I used Blender to create mash-ups of free 3D models available online. 
 
 Here are the three chairs and related scenes: 
 
@@ -118,6 +122,34 @@ Here are the three chairs and related scenes:
 ![Mushroom_at_the_edge_of_the_World-Chair](https://user-images.githubusercontent.com/76088958/164609955-a8e54ee3-2260-4389-ba01-c0d0296962bc.png)
 
 ![From_Death_Due_Us_Part-Chair](https://user-images.githubusercontent.com/76088958/164609972-e0d2486a-268e-4dd2-bf29-5bc2ef65da8d.png)
+
+Finally, I used Tilt Brush to create a chair in VR, see below. 
+
+![VR-Chair_Scene](https://user-images.githubusercontent.com/76088958/164618010-8f66e5e7-52b2-48aa-8c78-aa2f5b8293b1.png)
+
+### Reflection:
+
+I was super excited to start working in Blender and during the project I realized that I have an affinity for the tool. I really enjoyed the workflow of Blender to Unity with a mnotion capture animation. I decided on this route instead of the workflow of tying the digital model to a physical chair because of the technological challenges in connecting the VR headset for live editing in Unity. I definitely plan on continuing my exposure to 3D modeling and animation. 
+
+
+## Project 4 - Personal Project
+
+### Tools:
+
+Unity (VFX Graph) and Axis Neuron
+
+### Timeline: 
+
+2 weeks
+
+### Advisors:
+
+Maxim Safioulline, Jenny Rodenhouse and Ben Hooker
+
+### Project Brief: 
+
+
+### Project Documentation:
 
 
 
