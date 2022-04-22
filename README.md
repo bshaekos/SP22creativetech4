@@ -123,13 +123,13 @@ Here are the three chairs and related scenes:
 
 ![From_Death_Due_Us_Part-Chair](https://user-images.githubusercontent.com/76088958/164609972-e0d2486a-268e-4dd2-bf29-5bc2ef65da8d.png)
 
-Finally, I used Tilt Brush to create a chair in VR, see below. 
+Finally, I used Tilt Brush to create a chair in VR and imported it into Blender, see below. 
 
 ![VR-Chair_Scene](https://user-images.githubusercontent.com/76088958/164618010-8f66e5e7-52b2-48aa-8c78-aa2f5b8293b1.png)
 
 ### Reflection:
 
-I was super excited to start working in Blender and during the project I realized that I have an affinity for the tool. I really enjoyed the workflow of Blender to Unity with a mnotion capture animation. I decided on this route instead of the workflow of tying the digital model to a physical chair because of the technological challenges in connecting the VR headset for live editing in Unity. I definitely plan on continuing my exposure to 3D modeling and animation. 
+I was super excited to start working in Blender and during the project I realized that I have an affinity for the tool. I really enjoyed the workflow of Blender to Unity with a motion capture animation. I decided on this route instead of the workflow of tying the digital model to a physical chair as the final lesson plan outlined. The reason for this change was due to the technological challenges in connecting the VR headset for live editing in Unity, and the fact that the inside-out tracking on the headset made it difficult for accuracy. I liked the workflow from VR to Blender as well but I could not figure out how to add the images from Tilt Brush into the Blender model. Regardless, I believe that VR allows me to create a basic form that I can refine in Blender for a final output. I definitely plan on continuing my exposure to 3D modeling and animation. 
 
 
 ## Project 4 - Personal Project
@@ -148,6 +148,16 @@ Maxim Safioulline, Jenny Rodenhouse and Ben Hooker
 
 ### Project Brief: 
 
+
+### Process:
+
+![Unity_Animation](https://user-images.githubusercontent.com/76088958/164618827-67753331-1d7c-41d7-8272-e7df17a22ea2.png)
+
+![Unity_Scene](https://user-images.githubusercontent.com/76088958/164618840-b0655ed2-01e7-45de-9410-4da664383634.png)
+
+![VFX_Particle_1](https://user-images.githubusercontent.com/76088958/164618854-9d192181-96c2-43be-8587-ac015b7c9e00.png)
+
+![VFX_Particle_2](https://user-images.githubusercontent.com/76088958/164618875-b44e9863-1134-4e22-9ff2-62d5e83ac635.png)
 
 ### Project Documentation:
 
