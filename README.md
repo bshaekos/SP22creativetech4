@@ -2,6 +2,10 @@
 
 ## Project 1: Rube Goldberg Machine 
 
+### Tools:
+
+HTML, CSS and ITTT
+
 ### Timeline: 
 
 3 weeks
@@ -9,6 +13,10 @@
 ### Teammate: 
 
 Yining Gao
+
+### Advisors:
+
+Maxim Safioulline and Ben Hooker
 
 ### Project Brief: 
 
@@ -57,7 +65,7 @@ Overall, I found the project a lot of fun and a great opportunity for me to furt
 
 ### Tools:
 
-Agisoft, Blender, Gravity Sketch, Mixamo, Tilt Brush and Unity 
+Agisoft, Axis Neuron, Blender, Gravity Sketch, Mixamo, Tilt Brush and Unity 
 
 ### Timeline: 
 
@@ -97,4 +105,20 @@ Here is the final output from Blender:
 
 ![Photogram-Chair](https://user-images.githubusercontent.com/76088958/164579286-37ff1923-75c5-4846-a997-0497a3f12811.png)
 
-In addition, I motion captured my body and rigged the motion capture to a Maximo character. I placed both the chair and the rigged character into Unity to capture this video:
+In addition, I motion captured my body and rigged the motion capture to a Maximo character. I placed both the chair and the rigged character into Unity scene to capture this video:
+
+![Walking-Sitting_Animation](https://user-images.githubusercontent.com/76088958/164609462-0df42665-8670-49f1-ac4d-58c8e430150a.gif)
+
+In addition to using photogrammetry, I used Blender to create a mash-up of free 3D models available online. 
+
+Here are the three chairs and related scenes: 
+
+![Lady_Clocks_Game-Chair](https://user-images.githubusercontent.com/76088958/164609935-23fa58f4-cdd5-4430-90c6-a47a5bdd742f.png)
+
+![Mushroom_at_the_edge_of_the_World-Chair](https://user-images.githubusercontent.com/76088958/164609955-a8e54ee3-2260-4389-ba01-c0d0296962bc.png)
+
+![From_Death_Due_Us_Part-Chair](https://user-images.githubusercontent.com/76088958/164609972-e0d2486a-268e-4dd2-bf29-5bc2ef65da8d.png)
+
+
+
+
