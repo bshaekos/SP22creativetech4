@@ -65,7 +65,7 @@ Overall, I found the project a lot of fun and a great opportunity for me to furt
 
 ### Tools:
 
-Agisoft, Axis Neuron, Blender, Gravity Sketch, Mixamo, Tilt Brush and Unity 
+Axis Neuron, Blender, Gravity Sketch, Metashape Pro, Mixamo, Tilt Brush and Unity 
 
 ### Timeline: 
 
@@ -104,6 +104,10 @@ Here are some examples of the photos that I captured of the physical chair:
 ![IMG_0250](https://user-images.githubusercontent.com/76088958/164581046-3731c61f-0100-44a8-9b1e-8396c03e49cd.JPG)
 
 ![IMG_0259](https://user-images.githubusercontent.com/76088958/164581072-7eac4cc7-cce1-42ab-8061-65dfee98f37a.JPG)
+
+Here is the point cloud generated in Metashape, showing all of the images and angles that generated the initial 3D model:
+
+![Metashape-Point Cloud](https://user-images.githubusercontent.com/76088958/164619971-4e00424d-4425-42ee-ab9a-0affb1b0f9a9.png)
 
 Here is the final output from Blender:
 
