@@ -18,12 +18,15 @@ In the spirit of Rube Goldberg's fascination with the mechanism over the end res
 
 ### Process Sketches:
 
+First, from a list of APIs provided by our professors, Yining and I outlined the APIs that we found most interesting. Second, we discussed and rouhgly sketeched how we might connect those APIs togethered based off of the available data. Third, we began formatting the code so that we could retrieve the exact piece of information from each API. Lastly, we had to modify our initial ideas so that the entire string of APIs could function properly.
+
 
 ![Yining   Blake - RUBE GOLDBERG MACHINE - Process Sketches](https://user-images.githubusercontent.com/76088958/164383824-9c80c666-1a1c-4811-b1f0-4d02b2d840f4.jpg)
 
 
 ### System Architecture:
 
+In the end the mix of APIs changed in order to successfully complete a Rube Goldberg machine. 
 
 ![Yining   Blake - RUBE GOLDBERG MACHINE - System Architecture](https://user-images.githubusercontent.com/76088958/164376567-c9c4c608-d906-451e-901c-77a9c4ec1439.jpg)
 
