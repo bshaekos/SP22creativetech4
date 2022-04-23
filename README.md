@@ -142,7 +142,7 @@ Unity (VFX Graph) and Axis Neuron
 
 ### Timeline: 
 
-2 weeks
+3 weeks
 
 ### Advisors:
 
@@ -150,25 +150,49 @@ Maxim Safioulline, Ben Hooker and Jenny Rodenhouse
 
 ### Project Brief: 
 
+An integral part of working with contemporary technology is the capacity for continuous learning and self-guided exploration. Tools - applications, programming languages, frameworks and platforms - change continuously. It is important for a design practitioner to be able to identify areas of interest and paths for exploration within those ares; to be able to learn new tools and skills while maintaining a personal perspective and deliver compelling outcomes.
+
+This project invites you to ask radical questions about your creative practice - what media do you want to work in? what tools do you like to use and why? what skills would you like to learn or hone and for what purpose? The ultimate goal is to help you discover your own set of preferences in the realm of creative technology and potentially test the waters for a large, in-depth exploration you might pursue as part of your thesis project.
+
+Start with the tools and technologies you find interesting, promising, compelling - in so many words, cool. How would you apply them, what would you like to create given a free reign? Limit yourself to one set of tools or one medium (Machine Learning, or Mediated Realities, or the Internet of Things, etc.). Clearly define your toolset and the goals you'd like to achieve in the scope of three weeks. Find some resources - documentations, tutorials, communities of practice - to help you with your experimentation. Make something.
 
 ### Process:
 
 I was inspired by Theo Triantafyllidis "Anti Gone" (2020) mixed reality project, and I found Keijiro Takahashi's skinned mesh renderer VFX project mesmerizing. 
+
 ![CT4 - Project 4 - BSK](https://user-images.githubusercontent.com/76088958/164873736-1e5ac343-20c9-42ce-908e-6639ba638f47.jpg)
 
+I used Axis Neuron to capture my movements as I danced to the music. I found that the suit tracking to be quite poor so I had to complete several attempts with increasing limited movement. 
+
+https://user-images.githubusercontent.com/76088958/164878665-f720eee4-2995-4838-8487-ac0410b356f2.mov
+
 Here is an image of me wearing the motion capture:
+
 ![IMG_3312](https://user-images.githubusercontent.com/76088958/164873834-c88c4769-aabd-4703-b74d-4e06d9c530aa.jpg)
+
 
 ### Project Documentation:
 
-Here is the scene that I created around skinned mesh renderer animation:
+Here is the scene with three moving lighting arrays, volumetric lighting, a strobe light and two particle systems to mimic confetti:
+
 ![Unity_Scene](https://user-images.githubusercontent.com/76088958/164618840-b0655ed2-01e7-45de-9410-4da664383634.png)
 
 Here is the edited animation that I captured from the motion capture suit and tried to sync with the music:
+
 ![Unity_Animation](https://user-images.githubusercontent.com/76088958/164618827-67753331-1d7c-41d7-8272-e7df17a22ea2.png)
 
 Here is the VFX graph that I created for both the skinned mesh renderer and the particle system floated around the character:
+
 ![VFX_Particle_1](https://user-images.githubusercontent.com/76088958/164618854-9d192181-96c2-43be-8587-ac015b7c9e00.png)
 
 ![VFX_Particle_2](https://user-images.githubusercontent.com/76088958/164618875-b44e9863-1134-4e22-9ff2-62d5e83ac635.png)
+
+Here is a 30-second snippet of the final outcome: 
+
+https://user-images.githubusercontent.com/76088958/164878442-2bdf336f-0842-4eea-a9ea-9df288ed4464.mp4
+
+
+### Reflection: 
+
+I'm very satisfied with the results of the project but I was hoping to accomplish more by having the VFX effects modified by either the music and/or when colliders would interact with invisible "buttons" to trigger another effect. Unfortunately, I didn't have time to complete this part of the project but I was able to complete a simple prototype by using C++. I found myself completely enraptured throughout the entire project, and Unity is a software that I want to be very well-versed in. I was surprised by how well I was able to create the desired effect without much online tutorials. I learned by tutorials might not be the best route for me given the level of complexity I seek in a mixed reality project. After the project, I did find a conference talk by Keijiro that I plan to watch in depth to learn more about the fundamental aspects of the VFX Graph tool in Unity. 
 
