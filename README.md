@@ -158,7 +158,7 @@ Start with the tools and technologies you find interesting, promising, compellin
 
 ### Process:
 
-I was inspired by Theo Triantafyllidis "Anti Gone" (2020) mixed reality project, and I found Keijiro Takahashi's skinned mesh renderer VFX project mesmerizing. 
+I was inspired by Theo Triantafyllidis "Anti Gone" (2020) mixed reality project, and I found Keijiro Takahashi's skinned mesh renderer VFX project mesmerizing so I wanted to blend these two projects together. Also, I'm interested in the idea of objects breaking apart into particles as a way to communicate that everything is made up of tiny atomic particles at a micro-scale.  
 
 ![CT4 - Project 4 - BSK](https://user-images.githubusercontent.com/76088958/164873736-1e5ac343-20c9-42ce-908e-6639ba638f47.jpg)
 
