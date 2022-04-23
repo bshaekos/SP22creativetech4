@@ -91,8 +91,6 @@ Here are some examples of the photos that I captured of the physical chair:
 
 ![IMG_0151](https://user-images.githubusercontent.com/76088958/164580768-943a06f0-b835-4c67-a671-d6b9eacd1a88.JPG)
 
-![IMG_0156](https://user-images.githubusercontent.com/76088958/164580784-97ddab77-b76e-4ced-bd41-bd41e606a0a2.JPG)
-
 ![IMG_0161](https://user-images.githubusercontent.com/76088958/164580795-16afeb6a-bb87-4c69-8dfc-660b254fae90.JPG)
 
 ![IMG_0166](https://user-images.githubusercontent.com/76088958/164580844-9e02262e-3935-423b-8587-29f0e35fe725.JPG)
