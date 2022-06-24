@@ -173,7 +173,7 @@ Here is an image of me wearing the motion capture:
 
 ### Project Documentation:
 
-Here is the scene with three moving lighting arrays, volumetric lighting, a strobe light and two particle systems to mimic confetti:
+Here is the scene with three moving lighting arrays, volumetric lighting, a strobe light, two particle systems to mimic confetti and two invisible box triggers that affected the particle system:
 
 ![Unity_Scene](https://user-images.githubusercontent.com/76088958/164618840-b0655ed2-01e7-45de-9410-4da664383634.png)
 
@@ -194,5 +194,5 @@ https://user-images.githubusercontent.com/76088958/164878442-2bdf336f-0842-4eea-
 
 ### Reflection: 
 
-I'm very satisfied with the results of the project but I was hoping to accomplish more by having the VFX effects modified by either the music and/or when colliders would interact with invisible "buttons" to trigger another effect. Unfortunately, I didn't have time to complete this part of the project but I was able to complete a simple prototype by using C++. I found myself completely enraptured throughout the entire project, and Unity is a software that I want to be very well-versed in. I was surprised by how well I was able to create the desired effect without much online tutorials. I learned by tutorials might not be the best route for me given the level of complexity I seek in a mixed reality project. After the project, I did find a conference talk by Keijiro that I plan to watch in depth to learn more about the fundamental aspects of the VFX Graph tool in Unity. 
+I'm very satisfied with the results of the project but I was hoping to accomplish more by having the VFX effects modified by the music. Unfortunately, I didn't have time to complete this part of the project but I was able to complete a simple prototype by using C# and colliders that effect the particle system. I found myself completely enraptured throughout the entire project, and Unity is a software that I want to be very well-versed in. I was surprised by how well I was able to create the desired effect without much online tutorials. I learned by tutorials might not be the best route for me given the level of complexity I seek in a mixed reality project. After the project, I did find a conference talk by Keijiro that I plan to watch in depth to learn more about the fundamental aspects of the VFX Graph tool in Unity. 
 
